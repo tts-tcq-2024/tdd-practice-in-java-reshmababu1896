@@ -12,7 +12,7 @@ public class StringCalculator{
     return -1;
   }
 
-  protected boolean isEmptyString(Stirng str){
+  protected static boolean isEmptyString(Stirng str){
     if (str == null || str=="") {
         return true; // The string is empty
     }
