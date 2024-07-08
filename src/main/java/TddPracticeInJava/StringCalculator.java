@@ -4,11 +4,19 @@ package TddPracticeInJava;
 public class StringCalculator{
 
   public static int add(String str){
-    int result=-1;
-   if (str == null || str=="") {
-        return 0; // The string is empty
+
+    if(isEmptyString(str)){
+        return 0;
     }
-    return result;
+   
+    return -1;
+  }
+
+  protected boolean isEmptyString(Stirng str){
+    if (str == null || str=="") {
+        return true; // The string is empty
+    }
+    return false;
   }
   
 }
