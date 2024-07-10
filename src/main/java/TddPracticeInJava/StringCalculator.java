@@ -5,7 +5,7 @@ import java.util.List;
 
 public class StringCalculator{
   public static totalsum=0;
-  public static List<Integer> negatives = new ArrayList<>();
+  // public static List<Integer> negatives = new ArrayList<>();
 
   public static int add(String str){
     int result=-1;
@@ -43,9 +43,7 @@ protected static int  addNumbers(String[] numbersArray){
    // Sum numbers and handle negatives
         for (String numberStr : numbersArray) {
             int num = Integer.parseInt(numberStr);
-            if (num < 0) {
-                negatives.add(num);
-            } else if (num <= 1000) {
+            if (num >0  && num <= 1000) {
                 totalSum += num;
             }
         }
