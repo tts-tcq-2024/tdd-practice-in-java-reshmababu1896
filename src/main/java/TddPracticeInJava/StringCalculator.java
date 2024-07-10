@@ -8,8 +8,13 @@ public class StringCalculator{
     if(isEmptyString(str)|| str=="0"){
         return 0;
     }
+
+    
    
     return -1;
+  }
+
+  protected static int splitAndAddTheNumbers(str){
   }
 
   protected static boolean isEmptyString(String str){
