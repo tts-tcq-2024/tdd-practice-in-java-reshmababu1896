@@ -8,18 +8,15 @@ public class StringCalculator{
   // public static List<Integer> negatives = new ArrayList<>();
 
   public static int add(String str){
-    int result=-1;
-
-    if(isEmptyString(str)|| str=="0"){
-        return 0;
+      int result=-1;
+      if(isEmptyString(str)|| str=="0"){
+          return 0;
+      }
+      result=splitAndAddTheNumbers(str);
+      return result;
     }
 
-    result=splitAndAddTheNumbers(str);
-   
-    return result;
-  }
-
-  protected static int splitAndAdd(str){
+  protected static int splitAndAdd(String str){
         String delimiter = ",";
         String numbersInput = numbersStr;
 
