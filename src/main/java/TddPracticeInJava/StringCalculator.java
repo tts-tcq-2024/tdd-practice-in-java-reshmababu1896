@@ -43,12 +43,17 @@ protected static int  addNumbers(String[] numbersArray){
    // Sum numbers and handle negatives
         for (String numberStr : numbersArray) {
             int num = Integer.parseInt(numberStr);
-            if (num >0  && num <= 1000) {
-                totalSum += num;
-            }
+           totalSum=verifyNumber(num);
         }
   return totalSum;
   }
+protected static int verifyNumber(int num){
+    if (num >0  && num <= 1000) {
+                totalSum += num;
+       }
+  return totalSum;
+  }
+  
 
   protected static boolean isEmptyString(String str){
     if (str == null || str=="" ) {
