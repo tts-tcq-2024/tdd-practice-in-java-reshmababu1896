@@ -39,34 +39,34 @@ public class StringCalculatorTest {
         assertEquals(expectedResult,result);
     }
 
-   // @Test
-   //  public void ExpectSumWithNewlineDelimiter()
-   //  {
-   //      int expectedResult = 6;
-   //      String input = "1\n2,3";
-   //      StringCalculator objUnderTest = new StringCalculator();
-   //      int result = objUnderTest.add(input);
-   //       assertEquals(expectedResult,result);
-   //  }
+   @Test
+    public void ExpectSumWithNewlineDelimiter()
+    {
+        int expectedResult = 6;
+        String input = "1\n2,3";
+        StringCalculator objUnderTest = new StringCalculator();
+        int result = objUnderTest.add(input);
+         assertEquals(expectedResult,result);
+    }
 
  
-   //  @Test
-   //  public void ignoreNumbersGreaterThan1000() {
-   //      int expectedResult = 1;
-   //      String input = "1,1001";
-   //      StringCalculator objUnderTest = new StringCalculator();
-   //      int result = objUnderTest.add(input);
+    @Test
+    public void ignoreNumbersGreaterThan1000() {
+        int expectedResult = 1;
+        String input = "1,1001";
+        StringCalculator objUnderTest = new StringCalculator();
+        int result = objUnderTest.add(input);
 
-   //     assertEquals(expectedResult,result);
-   //  }
-   //  @Test
-   //  public void ExpectSumWithCustomDelimiter()
-   //  {
-   //      int expectedResult = 3;
-   //      String input = "//;\n1;2";
-   //      StringCalculator objUnderTest = new StringCalculator();
-   //      int result = objUnderTest.add(input);
+       assertEquals(expectedResult,result);
+    }
+    @Test
+    public void ExpectSumWithCustomDelimiter()
+    {
+        int expectedResult = 3;
+        String input = "//;\n1;2";
+        StringCalculator objUnderTest = new StringCalculator();
+        int result = objUnderTest.add(input);
 
-   //    assertEquals(expectedResult,result);
-   //  }
+      assertEquals(expectedResult,result);
+    }
 }
