@@ -18,7 +18,7 @@ public class StringCalculator{
     }
 
   protected static int splitAndAdd(String str){
-         String[] parts = inputString.split("[,[]//;\n\\W*]+");
+         String[] parts = str.split("[,[]//;\n\\W*]+");
   }
 
 protected static int  addNumbers(String[] numbersArray){
