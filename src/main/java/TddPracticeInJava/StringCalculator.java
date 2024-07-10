@@ -25,8 +25,13 @@ public class StringCalculator{
 
 protected static int  addNumbers(String[] numbersArray){
       for (String num : numbersArray) {
+        try{
           int number = Integer.parseInt(num);
           totalSum=verifyNumber(number);
+        }
+        catch(NumberFormatException  e){
+          continue;
+        }
       }
   return totalSum;
   }
