@@ -4,21 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StringCalculator{
-  public static int totalsum=0;
+  public static int totalSum=0;
   // public static List<Integer> negatives = new ArrayList<>();
 
   public static int add(String str){
       int result=-1;
-      if(isEmptyString(str)|| str=="0"){
+      if(isEmptyString(str) || str=="0"){
           return 0;
       }
-      result=splitAndAddTheNumbers(str);
+      result=splitAndAdd(str);
       return result;
     }
 
   protected static int splitAndAdd(String str){
         String delimiter = ",";
-        String numbersInput = numbersStr;
+        String numbersInput = str;
 
         // Check for custom delimiter
         if (numbersInput.startsWith("//")) {
