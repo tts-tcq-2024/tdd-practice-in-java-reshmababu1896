@@ -2,6 +2,8 @@
 package TddPracticeInJava;
 
 public class StringCalculator{
+  public static totalsum=0;
+  public static List<Integer> negatives = new ArrayList<>();
 
   public static int add(String str){
     int result=-1;
@@ -15,7 +17,7 @@ public class StringCalculator{
     return result;
   }
 
-  protected static int splitAndAddTheNumbers(str){
+  protected static int splitAndAdd(str){
         String delimiter = ",";
         String numbersInput = numbersStr;
 
@@ -31,10 +33,12 @@ public class StringCalculator{
 
         // Split string by delimiter
         String[] numbersArray = numbersInput.split(Pattern.quote(delimiter));
-        List<Integer> negatives = new ArrayList<>();
-        int totalSum = 0;
+      totalSum=addNumbers(numbersArray); 
+    return totalSum;
+  }
 
-        // Sum numbers and handle negatives
+protected static int  addNumbers(String[] numbersArray){
+   // Sum numbers and handle negatives
         for (String numberStr : numbersArray) {
             int num = Integer.parseInt(numberStr);
             if (num < 0) {
@@ -43,7 +47,7 @@ public class StringCalculator{
                 totalSum += num;
             }
         }
-    return totalSum;
+  return totalSum;
   }
 
   protected static boolean isEmptyString(String str){
