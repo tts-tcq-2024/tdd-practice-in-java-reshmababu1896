@@ -18,12 +18,13 @@ public class StringCalculator{
     }
 
   protected static int splitAndAdd(String str){
-         String[] parts = str.split("[,[]//;\n\\W*]+");
+         String[] numbersArray = str.split("[,[]//;\n\\W*]+");
+    return addNumbers(parts);
   }
 
 protected static int  addNumbers(String[] numbersArray){
-      for (String part : parts) {
-          int number = Integer.parseInt(part);
+      for (String num : numbersArray) {
+          int number = Integer.parseInt(num);
           totalSum=verifyNumber(number);
       }
   return totalSum;
