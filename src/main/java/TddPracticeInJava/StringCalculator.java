@@ -1,5 +1,7 @@
 
 package TddPracticeInJava;
+import java.util.ArrayList;
+import java.util.List;
 
 public class StringCalculator{
   public static totalsum=0;
