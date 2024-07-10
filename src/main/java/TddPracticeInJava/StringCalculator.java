@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StringCalculator{
-  public static totalsum=0;
+  public static int totalsum=0;
   // public static List<Integer> negatives = new ArrayList<>();
 
   public static int add(String str){
