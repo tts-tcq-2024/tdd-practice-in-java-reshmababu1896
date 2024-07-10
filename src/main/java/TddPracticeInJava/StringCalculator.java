@@ -18,26 +18,14 @@ public class StringCalculator{
     }
 
   protected static int splitAndAdd(String str){
-        String delimiter = ",";
-        String numbersInput = str;
-        if (numbersInput.startsWith("//")) {
-            int delimiterEnd = numbersInput.indexOf("\n");
-            delimiter = numbersInput.substring(2, delimiterEnd);
-            numbersInput = numbersInput.substring(delimiterEnd + 1);
-        }
-        numbersInput = numbersInput.replace("\n", delimiter);
-
-        String[] numbersArray = numbersInput.split(Pattern.quote(delimiter));
-        totalSum=addNumbers(numbersArray); 
-    return totalSum;
+         String[] parts = inputString.split("[,[]//;\n\\W*]+");
   }
 
 protected static int  addNumbers(String[] numbersArray){
-   
-        for (String numberStr : numbersArray) {
-            int num = Integer.parseInt(numberStr);
-           totalSum=verifyNumber(num);
-        }
+      for (String part : parts) {
+          int number = Integer.parseInt(part);
+          totalSum=verifyNumber(number);
+      }
   return totalSum;
   }
   
