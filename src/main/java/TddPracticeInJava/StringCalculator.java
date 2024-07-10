@@ -13,7 +13,7 @@ public class StringCalculator{
   }
 
   protected static boolean isEmptyString(String str){
-    if (str == null || str=="") {
+    if (str == null || str=="" || str=="0") {
         return true; // The string is empty
     }
     return false;
