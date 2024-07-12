@@ -76,12 +76,12 @@ public class StringCalculatorTest {
         StringCalculator objUnderTest = new StringCalculator();
   
        try {
-        foo.doStuff();
+        objUnderTest.add(input);
         fail("Negatives not allowed");
         } catch(IllegalArgumentException e) {
-        //if execution reaches here, 
-        //it indicates this exception was occured.
-        //so we need not handle it.
+            //if execution reaches here, 
+            //it indicates this exception was occured.
+            //so we need not handle it.
         }
       
     }
