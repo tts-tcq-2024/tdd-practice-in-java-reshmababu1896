@@ -36,9 +36,9 @@ public class StringCalculator{
         return null;
     }
 
-    protected static int addNumbers(char[] numbersArray) {
+    protected static int addNumbers(String[] numbersArray) {
            totalSum=0;
-       for (char num : numbersArray) {
+       for (String num : numbersArray) {
             try {
                 int number = Integer.parseInt(String.valueOf(num));
                 totalSum = verifyNumber(number);
