@@ -20,7 +20,6 @@ public class StringCalculator{
     protected static int splitAndAdd(String str) {
         String result = str.replaceAll("[\\-\\+\\.\\^\\\n\\;\\//:,]", "");
         char[] numbersArray = result.toCharArray();
-        System.out.println("After removing special characters" + numbersArray);
         return addNumbers(numbersArray);
     }
 
