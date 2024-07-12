@@ -18,10 +18,12 @@ public class StringCalculator{
     }
 
   protected static int splitAndAdd(String str){
-    // String  result = str.replaceAll("[\n;*&//]","");
-         String[] numbersArray = str.split("[\n;*&//]");
+    // String  result =(number.replace(/^[^0-9]+/, '')).split(/,|;|\n/);
+     String[] numbersArray = str.split("[\n;*&//]");
     return addNumbers(numbersArray);
   }
+
+  
 
 protected static int  addNumbers(String[] numbersArray){
       for (String num : numbersArray) {
