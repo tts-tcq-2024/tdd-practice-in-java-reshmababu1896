@@ -20,8 +20,6 @@ public class StringCalculator{
     }
 
     protected static int splitAndAdd(String str) {
-//        String result = str.replaceAll("[\\-\\+\\.\\^\\\n\\;\\//:,]", ",");
-//        String result = str.replaceAll("[^a-zA-Z0-9]", "");
         String[] numbersArray =splitValues(str);
         return addNumbers(numbersArray);
     }
@@ -29,10 +27,10 @@ public class StringCalculator{
    protected static String[] splitValues(String str){
         String result;
         if(str.contains(",")){
-            result= str.replaceAll("[\\-\\+\\.\\^\\\n\\;\\//:,]", ",");
+            result= str.replaceAll("[\\+\\.\\^\\\n\\;\\//:,]", ",");
            return result.split(",");
         }else if(str.contains(";")){
-            result= str.replaceAll("[\\-\\+\\.\\^\\\n\\;\\//:,]", ";");
+            result= str.replaceAll("[\\+\\.\\^\\\n\\;\\//:,]", ";");
             return result.split(";");
         }
         return null;
