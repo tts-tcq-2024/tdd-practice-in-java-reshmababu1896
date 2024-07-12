@@ -69,20 +69,20 @@ public class StringCalculatorTest {
       assertEquals(expectedResult,result);
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void ExpectException()
     {
         String input = "-1;2";
         StringCalculator objUnderTest = new StringCalculator();
-  
-       try {
-        objUnderTest.add(input);
-        fail("Negatives not allowed");
-        } catch(IllegalArgumentException e) {
-            //if execution reaches here, 
-            //it indicates this exception was occured.
-            //so we need not handle it.
-        }
+   objUnderTest.add(input);
+       // try {
+       //  objUnderTest.add(input);
+       //  fail("Negatives not allowed");
+       //  } catch(IllegalArgumentException e) {
+       //      //if execution reaches here, 
+       //      //it indicates this exception was occured.
+       //      //so we need not handle it.
+       //  }
       
     }
    
