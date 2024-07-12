@@ -40,7 +40,6 @@ public class StringCalculator{
 
     protected static int addNumbers(String[] numbersArray) {
            totalSum=0;
-       
        for (String num : numbersArray) {
             try {
                 int number = Integer.parseInt(String.valueOf(num));
@@ -49,12 +48,14 @@ public class StringCalculator{
                 continue;
             }
         }
-
-       if(!negatives.isEmpty()){
-          throw new IllegalArgumentException("Negatives not allowed: " + negatives.toString());
-       }
+       verifyNegatives();
         return totalSum;
     }
+   protected static void verifyNegatives(){
+      if(!negatives.isEmpty()){
+          throw new IllegalArgumentException("Negatives not allowed: " + negatives.toString());
+       }
+   }
 
     protected static int verifyNumber(int num) {
        if(num<0){
