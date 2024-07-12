@@ -6,6 +6,7 @@ import org.junit.Test;
 
 public class StringCalculatorTest {
 
+    public final ExpectedException exception = ExpectedException.none();
     
     @Test
     public void ExpectZeroForEmptyInput()
@@ -68,6 +69,16 @@ public class StringCalculatorTest {
         int result = objUnderTest.add(input);
 
       assertEquals(expectedResult,result);
+    }
+
+    @Test
+    public void ExpectSumWithCustomDelimiter()
+    {
+        String input = "-1;2";
+        StringCalculator objUnderTest = new StringCalculator();
+        int result = objUnderTest.add(input);  
+         exception.expect(IndexOutOfBoundsException.class);
+     // assertEquals("Negatives not allowed:",  objUnderTest.add(input));
     }
    
 }
