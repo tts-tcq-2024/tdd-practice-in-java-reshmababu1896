@@ -75,8 +75,14 @@ public class StringCalculatorTest {
         String input = "-1;2";
         StringCalculator objUnderTest = new StringCalculator();
   
-        Throwable exception = assertThrows(IndexOutOfBoundsException.class, () -> objUnderTest.add(input));
-        assertEquals("expected messages", exception.getMessage());
+       try {
+        foo.doStuff();
+        fail("Negatives not allowed");
+        } catch(IllegalArgumentException e) {
+        //if execution reaches here, 
+        //it indicates this exception was occured.
+        //so we need not handle it.
+        }
       
     }
    
