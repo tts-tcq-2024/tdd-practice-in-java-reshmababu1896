@@ -53,7 +53,7 @@ public class StringCalculator{
     }
    protected static void verifyNegatives(){
       if(!negatives.isEmpty()){
-          throw new IllegalArgumentException("Negatives not allowed: " + negatives.toString());
+          throw new IllegalArgumentException("Negatives not allowed");
        }
    }
 
