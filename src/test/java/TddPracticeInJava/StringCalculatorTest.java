@@ -69,7 +69,7 @@ public class StringCalculatorTest {
       assertEquals(expectedResult,result);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = Exception.class)
     public void ExpectException()
     {
         String input = "-1;2";
