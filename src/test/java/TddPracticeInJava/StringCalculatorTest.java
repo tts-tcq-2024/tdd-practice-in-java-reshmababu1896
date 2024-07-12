@@ -74,8 +74,10 @@ public class StringCalculatorTest {
     {
         String input = "-1;2";
         StringCalculator objUnderTest = new StringCalculator();
-        int result = objUnderTest.add(input);  
-       fail( "My method didn't throw when I expected it to" );
+  
+        Throwable exception = assertThrows(IndexOutOfBoundsException.class, () -> objUnderTest.add(input));
+        assertEquals("expected messages", exception.getMessage());
+      
     }
    
 }
