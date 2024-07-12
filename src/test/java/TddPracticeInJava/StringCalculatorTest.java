@@ -5,8 +5,6 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class StringCalculatorTest {
-
-    public final ExpectedException exception = ExpectedException.none();
     
     @Test
     public void ExpectZeroForEmptyInput()
@@ -72,13 +70,12 @@ public class StringCalculatorTest {
     }
 
     @Test
-    public void ExpectSumWithCustomDelimiter()
+    public void ExpectException()
     {
         String input = "-1;2";
         StringCalculator objUnderTest = new StringCalculator();
         int result = objUnderTest.add(input);  
-         exception.expect(IndexOutOfBoundsException.class);
-     // assertEquals("Negatives not allowed:",  objUnderTest.add(input));
+       fail( "My method didn't throw when I expected it to" );
     }
    
 }
