@@ -28,10 +28,10 @@ public class StringCalculator{
         String[] result=null;
         if(str.contains(",")){
             result= str.replaceAll("[\\+\\.\\^\\\n\\;\\//:,]", ",").split(",");
-//            return result.split(",");
+
         }else if(str.contains(";")){
             result= str.replaceAll("[\\+\\.\\^\\\n\\;\\//:,]", ";").split(";");
-//            return result.split(";");
+
         }
         return result;
     }
