@@ -25,7 +25,7 @@ public class StringCalculator{
     }
 
    protected static String[] splitValues(String str){
-        String[] result=null;
+        String[] result=new String[] {str};
         if(str.contains(",")){
             result= str.replaceAll("[\\+\\.\\^\\\n\\;\\//:,]", ",").split(",");
 
