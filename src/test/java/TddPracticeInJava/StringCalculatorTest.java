@@ -99,5 +99,10 @@ public class StringCalculatorTest {
     public void testAdd_NullString() {
         assertEquals(0, StringCalculator.add(null));
     }
+
+     @Test
+    public void testAdd_SingleNumber() {
+        assertEquals(1, StringCalculator.add("1"));
+    }
    
 }
