@@ -76,5 +76,23 @@ public class StringCalculatorTest {
         StringCalculator objUnderTest = new StringCalculator();
         objUnderTest.add(input); 
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testAdd_NegativeNumbers() {
+        StringCalculator objUnderTest = new StringCalculator();
+        objUnderTest.add("1,-2,3,-4");
+    }
+
+    @Test
+    public void testAdd_IgnoreNumbersGreaterThan1000() {
+        StringCalculator objUnderTest = new StringCalculator();
+        assertEquals(2, objUnderTest.add("2,1001"));
+    }
+
+     @Test
+    public void testAdd_CustomDelimiter() {
+        StringCalculator objUnderTest = new StringCalculator();
+        assertEquals(6, objUnderTest.add("//;\n1;2;3"));
+    }
    
 }
