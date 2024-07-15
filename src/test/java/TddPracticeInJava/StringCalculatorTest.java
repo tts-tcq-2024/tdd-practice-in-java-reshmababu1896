@@ -94,5 +94,10 @@ public class StringCalculatorTest {
         StringCalculator objUnderTest = new StringCalculator();
         assertEquals(6, objUnderTest.add("//;\n1;2;3"));
     }
+
+    @Test
+    public void testAdd_NullString() {
+        assertEquals(0, StringCalculator.add(null));
+    }
    
 }
